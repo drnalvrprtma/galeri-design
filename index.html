@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>drnalvrprtma galeri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grain"></div>
+  <div class="ambient"></div>
+
+  <nav id="navbar">
+    <a class="brand">drnalvrprtma</a>
+    <div class="nav-links">
+      <button onclick="showSection('profil')" class="active-nav" id="nav-profil">Profil</button>
+      <button onclick="showSection('galeri')" id="nav-galeri">Galeri</button>
+    </div>
+  </nav>
+
+  <section id="profil" class="active">
+    <div class="profil-wrap">
+      <div class="profil-card">
+        <div class="photo-col">
+          <div class="photo-frame">
+            <img src="https://files.catbox.moe/txussl.jpg" alt="Foto Profil Deren">
+          </div>
+          <span class="handle-badge">@drnalvrprtma</span>
+        </div>
+        <div class="text-col">
+          <p class="eyebrow">Desainer · Profesional</p>
+          <h1>Halo, saya <em>Deren</em></h1>
+          <div class="divider"></div>
+          <p>Saya berfokus pada GFX design dengan pendekatan yang rapi, detail, dan konsisten pada setiap karya. Setiap proyek digarap dengan riset konsep yang matang sebelum masuk ke tahap eksekusi.</p>
+          <p>Terbuka untuk kolaborasi, proyek baru, maupun sekadar berdiskusi seputar desain. Temukan saya melalui tautan berikut.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/drnalvrprtm?igsi=MXh6d2s4ZjNqM25ybg==" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.15" cy="6.85" r="0.6" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.tiktok.com/@drnalvrprtm" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.4a3.7 3.7 0 1 1 -3.2-3.67"/><path d="M14 4.2c.35 2.35 2.05 4.05 4.4 4.3"/></svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <div class="gallery-header">
+      <div class="gallery-avatar-wrap">
+        <img src="https://files.catbox.moe/txussl.jpg" alt="Foto Profil">
+      </div>
+      <p class="eyebrow">Koleksi Karya</p>
+      <h2>@drnalvrprtma</h2>
+      <p>Kumpulan hasil GFX design.</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-empty">Memuat galeri…</div>
+    </div>
+
+    <div class="gallery-footer">
+      <a href="https://www.instagram.com/drnalvrprtm?igsi=MXh6d2s4ZjNqM25ybg==" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.15" cy="6.85" r="0.6" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@drnalvrprtm" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.4a3.7 3.7 0 1 1 -3.2-3.67"/><path d="M14 4.2c.35 2.35 2.05 4.05 4.4 4.3"/></svg>
+        TikTok
+      </a>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+      </button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <div class="music-player" id="music-player">
+    <div class="music-track-info">
+      <span class="music-track-label">Sekarang Diputar</span>
+      <span class="music-track-name" id="track-name">Track 1</span>
+    </div>
+    <div class="music-progress">
+      <div class="music-progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="music-controls">
+      <button class="music-btn music-btn-skip" id="prev-btn" title="Sebelumnya">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+      </button>
+      <button class="music-btn music-btn-play" id="play-btn" title="Play / Pause">
+        <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+      </button>
+      <button class="music-btn music-btn-skip" id="skip-btn" title="Skip">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <audio id="bg-music"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
